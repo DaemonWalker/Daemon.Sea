@@ -19,9 +19,10 @@ namespace Daemon.Sea.Consul
             {
                 DeregisterCriticalServiceAfter = config.FirstCheck,
                 Interval = config.Interval,
-                HTTP = $"http://{config.Address}:{config.Port}/{config.Health}",
+                HTTP = $"http://{config.ServiceAddress}:{config.ServicePort}/{config.Health}",
                 Timeout = config.Timeout
             };
+            Console.WriteLine($"http://{config.Address}:{config.Port}/{config.Health}");
             var registration = new AgentServiceRegistration()
             {
                 Checks = new[] { httpCheck },

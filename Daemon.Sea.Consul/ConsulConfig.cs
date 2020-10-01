@@ -15,6 +15,6 @@ namespace Daemon.Sea.Consul
         public TimeSpan Interval { get; set; } = TimeSpan.FromSeconds(10);
         public TimeSpan Timeout { get; set; } = TimeSpan.FromSeconds(5);
         public TimeSpan FirstCheck { get; set; } = TimeSpan.FromSeconds(5);
-        public string Health { get; set; } = "/api/health";
+        public string Health { get; set; } = "api/health";
     }
 }
