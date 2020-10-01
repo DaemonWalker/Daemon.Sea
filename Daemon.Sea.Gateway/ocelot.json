@@ -1,0 +1,30 @@
+{
+  "DynamicRoutes": [
+    {
+      "ServiceName": "product",
+      "RateLimitRule": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "1s",
+        "PeriodTimespan": 1000.0,
+        "Limit": 3
+      }
+    }
+  ],
+  "GlobalConfiguration": {
+    "RequestIdKey": null,
+    "ServiceDiscoveryProvider": {
+      "Host": "localhost",
+      "Port": 8523,
+      "Type": "Consul"
+    },
+    "RateLimitOptions": {
+      "ClientIdHeader": "ClientId",
+      "QuotaExceededMessage": "",
+      "RateLimitCounterPrefix": "",
+      "DisableRateLimitHeaders": false,
+      "HttpStatusCode": 428
+    },
+    "DownstreamScheme": "http"
+  }
+}
