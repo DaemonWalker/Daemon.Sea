@@ -1,1 +1,1 @@
-consul agent dev
+consul agent -dev
